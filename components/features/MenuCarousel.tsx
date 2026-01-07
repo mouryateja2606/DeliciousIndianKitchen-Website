@@ -239,10 +239,10 @@ export function MenuCarousel({ images }: MenuCarouselProps) {
 
                         {/* Image Container */}
                         {/* Image Container - New Structure for Proper Scrolling */}
-                        {/* 1. Scrollable Container */}
-                        <div className="w-full h-full overflow-auto">
-                            {/* 2. Sizing Wrapper - Ensures centering when small, expands when large */}
-                            <div className="min-w-full min-h-full flex items-center justify-center p-8 md:p-16 relative">
+                        {/* 1. Scrollable Container - Added flex to support m-auto centering */}
+                        <div className="w-full h-full overflow-auto flex">
+                            {/* 2. Sizing Wrapper - m-auto handles centering safely. Removed fixed flex center which clipped left content. */}
+                            <div className="relative m-auto p-8 md:p-16">
                                 {/* 3. The Image Wrapper - Controls actual size */}
                                 <motion.div
                                     animate={{
