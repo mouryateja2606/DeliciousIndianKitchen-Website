@@ -178,7 +178,7 @@ export function Hero() {
                                 <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                             </defs>
                             <text className="text-[8px] md:text-[8px] font-bold fill-gold uppercase tracking-[2px]">
-                                <textPath href="#circlePath" startOffset="50%" textAnchor="middle" className="fill-white text-[10px] font-bold tracking-[0.2em] uppercase">
+                                <textPath href="#circlePath" startOffset="50%" textAnchor="middle" className="fill-gold text-[10px] font-bold tracking-[0.2em] uppercase">
                                     • {language === 'de' ? 'Nährwerte' : 'Nutritional'} • Info •
                                 </textPath>
                             </text>

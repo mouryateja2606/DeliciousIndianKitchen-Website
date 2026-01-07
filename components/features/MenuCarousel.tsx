@@ -133,7 +133,6 @@ export function MenuCarousel({ images }: MenuCarouselProps) {
                                 animate={{
                                     scale: index === currentIndex ? 1.0 : 0.9, // Less shrink on mobile
                                     opacity: index === currentIndex ? 1 : 0.4,
-                                    zIndex: index === currentIndex ? 10 : 0,
                                 }}
                                 transition={{ duration: 0.4 }}
                                 onClick={() => index === currentIndex && openZoom()}
@@ -143,7 +142,7 @@ export function MenuCarousel({ images }: MenuCarouselProps) {
                                     alt={`Menu Page ${index + 1}`}
                                     fill
                                     className="object-contain"
-                                    priority={index === 0}
+                                    priority={true}
                                 />
 
                                 {/* Zoom Hint Overlay */}
