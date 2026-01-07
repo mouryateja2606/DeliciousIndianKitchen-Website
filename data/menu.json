@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "Ambur Chicken Biryani",
+        "price": {
+            "amount": 1200,
+            "currency": "EUR"
+        },
+        "description": "Delicious traditional Ambur style biryani",
+        "image_url": ""
+    },
+    {
+        "id": "2",
+        "name": "Butter Chicken",
+        "price": {
+            "amount": 1200,
+            "currency": "EUR"
+        },
+        "description": "Rich and creamy butter chicken curry",
+        "image_url": ""
+    },
+    {
+        "id": "3",
+        "name": "Appam Batter (1 kg pack)",
+        "price": {
+            "amount": 600,
+            "currency": "EUR"
+        },
+        "description": "Fresh Appam batter",
+        "image_url": ""
+    },
+    {
+        "id": "4",
+        "name": "Chapati 1 nos",
+        "price": {
+            "amount": 100,
+            "currency": "EUR"
+        },
+        "description": "Freshly made Chapati",
+        "image_url": ""
+    },
+    {
+        "id": "5",
+        "name": "Becks",
+        "price": {
+            "amount": 350,
+            "currency": "EUR"
+        },
+        "description": "Chilled Beer",
+        "image_url": ""
+    },
+    {
+        "id": "6",
+        "name": "Apple spritzer (0.3 l)",
+        "price": {
+            "amount": 250,
+            "currency": "EUR"
+        },
+        "description": "Refreshing Apple Spritzer",
+        "image_url": ""
+    }
+]

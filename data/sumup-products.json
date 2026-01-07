@@ -1,0 +1,589 @@
+{
+    "items": [
+        {
+            "item_id": "1",
+            "name": "Ambur Chicken Biryani",
+            "category_ids": [
+                "biryani"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1200,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/menu/ambur_chicken_biryani.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "2",
+            "name": "Hyderabadi Lamb Biryani",
+            "category_ids": [
+                "biryani"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1450,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "3",
+            "name": "Veg Biryani",
+            "category_ids": [
+                "biryani"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1050,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "4",
+            "name": "Paneer Butter Masala",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1200,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/paneer_butter_masala_final.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "5",
+            "name": "Butter Chicken",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1250,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/menu/butter_chicken.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "6",
+            "name": "Chicken Tikka Masala",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1300,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "7",
+            "name": "Palak Paneer",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1150,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "8",
+            "name": "Dal Makhani",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1050,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "9",
+            "name": "Masala Dosa",
+            "category_ids": [
+                "dosa"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 950,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/dosa_idli_smoke_3d.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "10",
+            "name": "Plain Dosa",
+            "category_ids": [
+                "dosa"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 750,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "11",
+            "name": "Ghee Roast Dosa",
+            "category_ids": [
+                "dosa"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 850,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "12",
+            "name": "Idli Sambar (2 pcs)",
+            "category_ids": [
+                "dosa"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 650,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "13",
+            "name": "Vada Sambar (2 pcs)",
+            "category_ids": [
+                "starter"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 650,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "14",
+            "name": "Chicken 65",
+            "category_ids": [
+                "starter"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 890,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "15",
+            "name": "Samosa (2 pcs)",
+            "category_ids": [
+                "starter"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 500,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/hero_samosa.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "16",
+            "name": "Gobi Manchurian",
+            "category_ids": [
+                "starter"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 950,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "17",
+            "name": "Garlic Naan",
+            "category_ids": [
+                "bread"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 350,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "18",
+            "name": "Butter Naan",
+            "category_ids": [
+                "bread"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 300,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "19",
+            "name": "Tandoori Roti",
+            "category_ids": [
+                "bread"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 250,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "20",
+            "name": "Mango Lassi",
+            "category_ids": [
+                "drink"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 450,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/hero_mango.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "21",
+            "name": "Salt Lassi",
+            "category_ids": [
+                "drink"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 400,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "22",
+            "name": "Masala Chai",
+            "category_ids": [
+                "drink"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 350,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "23",
+            "name": "Gulab Jamun",
+            "category_ids": [
+                "dessert"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 550,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [
+                "/assets/hero_gulab.png"
+            ],
+            "sell_online": true
+        },
+        {
+            "item_id": "24",
+            "name": "Rasmalai",
+            "category_ids": [
+                "dessert"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 600,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "25",
+            "name": "Lamb Rogan Josh",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1550,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "26",
+            "name": "Prawn Masala",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1650,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "27",
+            "name": "Coca Cola 0.33l",
+            "category_ids": [
+                "drink"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 250,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "28",
+            "name": "Sparkling Water 0.75l",
+            "category_ids": [
+                "drink"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 550,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "29",
+            "name": "Vegetable Korma",
+            "category_ids": [
+                "curry"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 1150,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        },
+        {
+            "item_id": "30",
+            "name": "Onion Pakora",
+            "category_ids": [
+                "starter"
+            ],
+            "variants": [
+                {
+                    "price": {
+                        "amount": {
+                            "value": 550,
+                            "currency": "EUR"
+                        }
+                    }
+                }
+            ],
+            "image_urls": [],
+            "sell_online": true
+        }
+    ],
+    "items_count": 30
+}
