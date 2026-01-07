@@ -175,11 +175,11 @@ export function Hero() {
                     <div className="absolute inset-0 animate-[spin_10s_linear_infinite] group-hover:pause">
                         <svg className="w-full h-full" viewBox="0 0 100 100">
                             <defs>
-                                <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                             </defs>
                             <text className="text-[8px] md:text-[8px] font-bold fill-gold uppercase tracking-[2px]">
-                                <textPath xlinkHref="#circle">
-                                    • Nutritional • Info •
+                                <textPath href="#circlePath" startOffset="50%" textAnchor="middle" className="fill-white text-[10px] font-bold tracking-[0.2em] uppercase">
+                                    • {language === 'de' ? 'Nährwerte' : 'Nutritional'} • Info •
                                 </textPath>
                             </text>
                         </svg>
