@@ -190,19 +190,19 @@ export function MenuItemCard({ item, index }: MenuItemCardProps) {
                                 initial={{ scale: 0.9, y: 20 }}
                                 animate={{ scale: 1, y: 0 }}
                                 exit={{ scale: 0.9, y: 20 }}
-                                className="bg-zinc-900 border border-gold/30 rounded-2xl max-w-lg w-full relative shadow-2xl flex flex-col max-h-[85vh] overflow-hidden"
+                                className="fixed inset-0 z-[110] w-full h-full bg-zinc-900 flex flex-col md:relative md:w-full md:max-w-lg md:max-h-[85vh] md:rounded-2xl md:shadow-2xl md:inset-auto md:h-auto overflow-hidden"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 {/* Close Button - Fixed relative to container */}
                                 <button
                                     onClick={() => setShowInfo(false)}
-                                    className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors z-50 p-2 bg-zinc-900/50 rounded-full"
+                                    className="absolute top-6 right-6 md:top-4 md:right-4 text-white hover:text-red-500 transition-colors z-50 p-2 bg-black/50 backdrop-blur-sm rounded-full border border-white/10"
                                 >
-                                    <X size={24} />
+                                    <X size={28} className="md:w-6 md:h-6" />
                                 </button>
 
                                 {/* Scrollable Content */}
-                                <div className="overflow-y-auto p-6 md:p-8 custom-scrollbar">
+                                <div className="flex-1 overflow-y-auto min-h-0 p-6 md:p-8 custom-scrollbar overscroll-contain">
                                     {/* Header */}
                                     <div className="mb-4 pr-8">
                                         <h3 className="text-2xl md:text-3xl font-serif font-bold text-gold">{item.title}</h3>
