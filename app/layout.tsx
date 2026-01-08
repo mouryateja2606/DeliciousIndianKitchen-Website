@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Delicious Indian Kitchen | Authentic Indian Restaurant in Bremen",
   description: "Experience the best authentic Indian cuisine in Bremen. Serving Biryani, Tandoori, and Curries. Halal meat, vegetarian options, and online table reservation available.",
   keywords: ["Indian Restaurant Bremen", "Delicious Indian Kitchen", "Bremen Food", "Authentic Indian", "Biryani Bremen", "Halal Restaurant Bremen", "Hulsberg 139"],
+  icons: {
+    icon: '/assets/logo_gold_2026.png',
+  },
 };
 
 export const viewport: Viewport = {
