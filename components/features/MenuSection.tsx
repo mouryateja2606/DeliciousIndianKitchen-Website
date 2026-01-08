@@ -11,6 +11,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 import { useSumupMenu } from "@/hooks/useSumupMenu";
 import { BookOpen, Leaf, Download } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 // Mock Data
 const CATEGORIES = ["All", "Starters", "Biryani", "Dosa", "Curries", "Snacks", "Drinks"];
@@ -90,6 +91,17 @@ export function MenuSection() {
     // State to hold menu cards
     const [menuCards, setMenuCards] = useState<string[]>(MENU_CARDS);
     const [activeTab, setActiveTab] = useState<'menu' | 'nutrition'>('menu');
+    const searchParams = useSearchParams();
+
+    // Check for tab param
+    useEffect(() => {
+        const tab = searchParams.get('tab');
+        if (tab === 'nutrition') {
+            setActiveTab('nutrition');
+        } else if (tab === 'menu') {
+            setActiveTab('menu');
+        }
+    }, [searchParams]);
 
     // Fetch from Sanity on mount
     useEffect(() => {

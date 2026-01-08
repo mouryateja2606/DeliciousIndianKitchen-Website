@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Facebook, Instagram, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Phone, MapPin, Mail } from "lucide-react";
 import { SectionHeader } from "../features/SectionHeader";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
@@ -35,6 +35,12 @@ export function Footer() {
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <span className="text-lg">0 176 470 677 35</span>
+                            </a>
+                            <a href="mailto:deliciousindiankitchen.bremen@gmail.com" className="flex items-center gap-4 hover:text-white transition-colors group">
+                                <div className="p-3 border border-white/10 rounded-full group-hover:border-gold group-hover:text-gold transition-colors">
+                                    <Mail className="w-5 h-5" />
+                                </div>
+                                <span className="text-lg break-all">deliciousindiankitchen.bremen@gmail.com</span>
                             </a>
                             <a href="https://www.google.com/maps/search/?api=1&query=Am+Hulsberg+139,+28205+Bremen" target="_blank" className="flex items-center gap-4 hover:text-white transition-colors group">
                                 <div className="p-3 border border-white/10 rounded-full group-hover:border-gold group-hover:text-gold transition-colors">

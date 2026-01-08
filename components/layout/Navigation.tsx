@@ -20,7 +20,7 @@ export function Navigation() {
 
   const navItems = [
     { name: nav.home, href: "/" },
-    { name: nav.menu, href: "/#menu" },
+    { name: nav.menu, href: "/?tab=menu#menu" },
     { name: nav.about, href: "/#about" },
     { name: nav.contact, href: "/#location" }
   ];
@@ -106,7 +106,7 @@ export function Navigation() {
 
             {/* Menu + Nutritional Symbol Combined */}
             <Link
-              href="/#menu"
+              href="/?tab=menu#menu"
               className="relative group overflow-hidden rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-300 px-6 h-10 flex items-center justify-center min-w-[80px] gap-2"
             >
               <Leaf size={14} className="text-gold group-hover:scale-110 transition-transform" />

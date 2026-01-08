@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MenuItem } from "@/lib/types";
 import { MoveRight, Info, X, Flame, Activity, Leaf, Wheat } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface MenuItemCardProps {
@@ -14,6 +14,18 @@ interface MenuItemCardProps {
 export function MenuItemCard({ item, index }: MenuItemCardProps) {
     const [showInfo, setShowInfo] = useState(false);
     const { language } = useLanguage();
+
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (showInfo) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [showInfo]);
     const animationDelay = (index || 0) * 0.1;
 
     // DEBUG: Log attributes to console to verify data flow
@@ -50,6 +62,7 @@ export function MenuItemCard({ item, index }: MenuItemCardProps) {
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: animationDelay }}
                 whileHover={{ y: -10, scale: 1.02 }}
 
@@ -177,76 +190,79 @@ export function MenuItemCard({ item, index }: MenuItemCardProps) {
                                 initial={{ scale: 0.9, y: 20 }}
                                 animate={{ scale: 1, y: 0 }}
                                 exit={{ scale: 0.9, y: 20 }}
-                                className="bg-zinc-900 border border-gold/30 rounded-2xl p-6 md:p-8 max-w-lg w-full relative shadow-2xl overflow-hidden"
+                                className="bg-zinc-900 border border-gold/30 rounded-2xl max-w-lg w-full relative shadow-2xl flex flex-col max-h-[85vh] overflow-hidden"
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                {/* Close Button */}
+                                {/* Close Button - Fixed relative to container */}
                                 <button
                                     onClick={() => setShowInfo(false)}
-                                    className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                                    className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors z-50 p-2 bg-zinc-900/50 rounded-full"
                                 >
                                     <X size={24} />
                                 </button>
 
-                                {/* Header */}
-                                <div className="mb-4">
-                                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-gold">{item.title}</h3>
-                                    {dietaryLabel && (
-                                        <p className="text-sm font-medium mt-1 text-white/80">{dietaryLabel}</p>
-                                    )}
-                                </div>
-
-                                {/* Description */}
-                                <p className="text-gray-300 italic mb-6 leading-relaxed border-l-2 border-gold/30 pl-4">
-                                    "{description}"
-                                </p>
-
-                                {/* Macros Row */}
-                                <div className="grid grid-cols-3 gap-2 mb-6">
-                                    <MacroBox label={t.protein} value={item.nutritionalInfo.protein} color="text-blue-400" />
-                                    <MacroBox label={t.carbs} value={item.nutritionalInfo.carbs} color="text-yellow-400" />
-                                    <MacroBox label={t.fats} value={item.nutritionalInfo.fats} color="text-red-400" />
-                                </div>
-
-                                {/* Nutrient Highlights (Fiber & Vitamins) */}
-                                <div className="grid grid-cols-2 gap-4 mb-6">
-                                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                                        <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2"><Wheat size={14} /> {t.fiber}</h4>
-                                        <span className="text-2xl font-bold text-white">{item.nutritionalInfo.fiber || t.richSource}</span>
+                                {/* Scrollable Content */}
+                                <div className="overflow-y-auto p-6 md:p-8 custom-scrollbar">
+                                    {/* Header */}
+                                    <div className="mb-4 pr-8">
+                                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-gold">{item.title}</h3>
+                                        {dietaryLabel && (
+                                            <p className="text-sm font-medium mt-1 text-white/80">{dietaryLabel}</p>
+                                        )}
                                     </div>
-                                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                                        <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2"><Activity size={14} /> {t.vitamins}</h4>
-                                        <div className="flex flex-wrap gap-1">
-                                            {item.nutritionalInfo.vitamins?.map((vit, i) => (
-                                                <span key={i} className="text-xs text-white/80 bg-black/40 px-2 py-1 rounded-md">{vit}</span>
-                                            ))}
+
+                                    {/* Description */}
+                                    <p className="text-gray-300 italic mb-6 leading-relaxed border-l-2 border-gold/30 pl-4">
+                                        "{description}"
+                                    </p>
+
+                                    {/* Macros Row */}
+                                    <div className="grid grid-cols-3 gap-2 mb-6">
+                                        <MacroBox label={t.protein} value={item.nutritionalInfo.protein} color="text-blue-400" />
+                                        <MacroBox label={t.carbs} value={item.nutritionalInfo.carbs} color="text-yellow-400" />
+                                        <MacroBox label={t.fats} value={item.nutritionalInfo.fats} color="text-red-400" />
+                                    </div>
+
+                                    {/* Nutrient Highlights (Fiber & Vitamins) */}
+                                    <div className="grid grid-cols-2 gap-4 mb-6">
+                                        <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                                            <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2"><Wheat size={14} /> {t.fiber}</h4>
+                                            <span className="text-2xl font-bold text-white">{item.nutritionalInfo.fiber || t.richSource}</span>
+                                        </div>
+                                        <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                                            <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2"><Activity size={14} /> {t.vitamins}</h4>
+                                            <div className="flex flex-wrap gap-1">
+                                                {item.nutritionalInfo.vitamins?.map((vit, i) => (
+                                                    <span key={i} className="text-xs text-white/80 bg-black/40 px-2 py-1 rounded-md">{vit}</span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Ingredients */}
-                                {ingredients && (
-                                    <div className="mb-6">
-                                        <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2">
-                                            <Flame size={14} /> {t.ingredients}
+                                    {/* Ingredients */}
+                                    {ingredients && (
+                                        <div className="mb-6">
+                                            <h4 className="text-gold text-xs uppercase font-bold tracking-widest mb-2 flex items-center gap-2">
+                                                <Flame size={14} /> {t.ingredients}
+                                            </h4>
+                                            <p className="text-sm text-gray-400 leading-relaxed">
+                                                {ingredients.join(", ")}
+                                            </p>
+                                        </div>
+                                    )}
+
+                                    {/* Benefits Tags */}
+                                    <div className="space-y-3 pb-2">
+                                        <h4 className="text-white font-bold uppercase text-xs tracking-wider flex items-center gap-2">
+                                            <Leaf size={14} className="text-green-400" /> {t.benefits}
                                         </h4>
-                                        <p className="text-sm text-gray-400 leading-relaxed">
-                                            {ingredients.join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* Benefits Tags */}
-                                <div className="space-y-3">
-                                    <h4 className="text-white font-bold uppercase text-xs tracking-wider flex items-center gap-2">
-                                        <Leaf size={14} className="text-green-400" /> {t.benefits}
-                                    </h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {item.nutritionalInfo.benefits.map((benefit, i) => (
-                                            <span key={i} className="px-3 py-1.5 bg-green-900/20 border border-green-500/20 rounded-full text-xs text-green-300 font-medium">
-                                                {benefit}
-                                            </span>
-                                        ))}
+                                        <div className="flex flex-wrap gap-2">
+                                            {item.nutritionalInfo.benefits.map((benefit, i) => (
+                                                <span key={i} className="px-3 py-1.5 bg-green-900/20 border border-green-500/20 rounded-full text-xs text-green-300 font-medium">
+                                                    {benefit}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
