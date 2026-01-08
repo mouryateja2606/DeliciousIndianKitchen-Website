@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Hero } from "@/components/features/Hero";
 
 import { MenuSection } from "@/components/features/MenuSection";
@@ -11,7 +12,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col justify-between bg-black text-white selection:bg-gold selection:text-black">
       <Hero />
 
-      <MenuSection />
+      <Suspense fallback={<div className="min-h-screen bg-black" />}>
+        <MenuSection />
+      </Suspense>
       <AboutSection />
       <ReviewsSection />
       <Footer />
